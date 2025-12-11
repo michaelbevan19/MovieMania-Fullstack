@@ -20,7 +20,8 @@ const AddMovie = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/movies', movie);
+      // 👇 UPDATED LINK HERE
+      await axios.post('https://moviemania-fullstack-production.up.railway.app/movies', movie);
       navigate('/');
     } catch (err) {
       console.log(err);

@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchAllMovies = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/movies');
+        const res = await axios.get('https://moviemania-fullstack-production.up.railway.app/movies');
         setMovies(res.data);
       } catch (err) {
         console.log(err);
@@ -22,7 +22,7 @@ const Home = () => {
   // Delete Movie
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/movies/${id}`);
+      await axios.delete(`https://moviemania-fullstack-production.up.railway.app/movies/${id}`);
       setMovies(movies.filter(movie => movie.id !== id));
     } catch (err) {
       console.log(err);
